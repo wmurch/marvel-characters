@@ -1,10 +1,9 @@
 import React, { Component } from 'react'
-import HelloWorld from './components/HelloWorld'
+import DataMain from './components/DataMain'
 
 class App extends Component {
   render() {
-    return <HelloWorld />
+    return <DataMain />
   }
 }
-
 export default App
