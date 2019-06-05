@@ -16,13 +16,19 @@ export default function DataMain() {
 
   console.log({ characters })
   return (
-    <section>
-      {characters.map((character, key) => (
-        <p>
-          key = {character.id}
-          character = {character.name}
-        </p>
-      ))}
-    </section>
+    <>
+      <main>
+        <section>
+          {characters.map(character => (
+            <ul>
+              <li>
+                <h1 className="character-title">{character.name}</h1>
+                <img src={character.thumbnail} alt={character.name} />
+              </li>
+            </ul>
+          ))}
+        </section>
+      </main>
+    </>
   )
 }
