@@ -17,10 +17,12 @@ export default function DataMain() {
   console.log({ characters })
   return (
     <section>
-      {characters.map((character, index) => {
-        key = { index }
-        character = { character }
-      })}
+      {characters.map((character, key) => (
+        <p>
+          key = {character.id}
+          character = {character.name}
+        </p>
+      ))}
     </section>
   )
 }
