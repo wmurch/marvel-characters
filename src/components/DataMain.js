@@ -19,9 +19,9 @@ export default function DataMain() {
     <>
       <main>
         <section>
-          {characters.map((character, index) => {
-            return (
-              <ul>
+          <ul>
+            {characters.map((character, index) => {
+              return (
                 <li key={index}>
                   <h1 className="character-title">{character.name}</h1>
                   <img
@@ -31,9 +31,9 @@ export default function DataMain() {
                     alt={character.name}
                   />
                 </li>
-              </ul>
-            )
-          })}
+              )
+            })}
+          </ul>
         </section>
       </main>
     </>
