@@ -19,14 +19,21 @@ export default function DataMain() {
     <>
       <main>
         <section>
-          {characters.map(character => (
-            <ul>
-              <li>
-                <h1 className="character-title">{character.name}</h1>
-                <img src={character.thumbnail} alt={character.name} />
-              </li>
-            </ul>
-          ))}
+          {characters.map((character, index) => {
+            return (
+              <ul>
+                <li key={index}>
+                  <h1 className="character-title">{character.name}</h1>
+                  <img
+                    src={`${character.thumbnail.path}.${
+                      character.thumbnail.extension
+                    }`}
+                    alt={character.name}
+                  />
+                </li>
+              </ul>
+            )
+          })}
         </section>
       </main>
     </>
